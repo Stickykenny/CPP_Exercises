@@ -8,3 +8,5 @@
 #     f2.cpp
 #     f3.cpp
 # )
+
+add_executable(hello-world helloworld.cpp)
