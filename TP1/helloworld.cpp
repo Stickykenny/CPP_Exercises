@@ -2,10 +2,9 @@
 
 int main()
 {
-	auto var = 0;
-	std::cout << "Hello World !" << std::endl;
+	std::string var;
+	std::cout << "What's your name?" << std::endl;
 	std::cin >> var;
-	std::cout << var << std::endl;
-
+	std::cout << "Hello " << var << "!" << std::endl;
 	return 0;
 }

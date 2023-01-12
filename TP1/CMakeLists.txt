@@ -9,4 +9,7 @@
 #     f3.cpp
 # )
 
-add_executable(hello-world helloworld.cpp)
+add_executable(
+    hello-world.exe # Pour Windows l'executable est un .exe donc il faut l'ajouter 
+    helloworld.cpp 
+)
