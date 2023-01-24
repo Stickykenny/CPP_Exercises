@@ -79,7 +79,7 @@ int main()
         if (input.find("add") == 0)
         {
 
-            input = input.substr(4); // skip add et l'espace
+            input = input.substr(4); // skip add et l'espace // problème içi c'est le 4 qui est en dur
             size_t pos = input.find(" ");
             auto w1 = input.substr(0, pos);
             input = input.substr(pos);
@@ -118,7 +118,7 @@ int main()
         }
         if (input.find("remove") == 0)
         {
-            input = input.substr(7); // skip add et l'espace
+            input = input.substr(7); // skip "remove" et l'espace // same problème qu'en haut
             size_t pos = input.find(" ");
             auto w1 = input.substr(0, pos);
             for (auto it = translator.begin(); it != translator.end(); it++)
