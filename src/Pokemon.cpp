@@ -27,7 +27,7 @@ Pokemon &Pokemon::operator=(const Pokemon &other)
     if (this != &other)
     {
         _name = other._name;
-        _id = other._id;
+        //_id = other._id;
     }
     return *this;
 }
