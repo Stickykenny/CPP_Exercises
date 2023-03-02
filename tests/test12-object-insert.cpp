@@ -38,5 +38,4 @@ TEST_CASE("ObjectNode::insert() allows to insert a new element in the dictionary
     REQUIRE(objectnode_ptr->print() == target);
     // NB: in `target` above, keys are sorted in increasing order, not in insertion order!
 }
-
 #include "routine_memory_check.cpp"
