@@ -59,22 +59,36 @@ In each of the following case:
 
 - Q22.1 (Youssef):
   * a. Is the string `youssef_bergeron_name` copied to call `Person(const std::string& name)`?
+  *  > Non
   * b. Is it copied by `_name { name }` ?
+  * > Oui (TOUT LE TEMPS, car le constructeur prends une const ref)
   * c. Could copies be avoided somehow?
+  * > Oui
 - Q22.2 (Clément):
   * a. Is the string `clement_chomicki_name` copied to call `Person(const std::string& name)`?
+  * > Non
   * b. Is it copied by `_name { name }` ?
+  * > Oui 
   * c. Could copies be avoided somehow?
+  * > Oui
 - Q22.3 (Victor): 
   * a. What is the type of the expression `"Victor Marsault"`
+  * > const char* 
   * b. Is it copied copied to call `Person(const std::string& name)`?
+  * > Oui
   * c. Is it copied by `_name { name }` ?
+  * > Oui
   * d. Could copies be avoided somehow?
+  * > Oui
 - Q22.4 (Céline)
-  * a. what is the type of the expression `celine+" "+noel` ?
-  * b. Is it copied copied to call `Person(const std::string& name)`?
+  * a. what is the type of the expression `celine+" "+noel` ? 
+  * > std::string // le construit dans un endroit aléatoire
+  * b. Is it copied to call `Person(const std::string& name)`? 
+  * > yes // Dépends de si on voit qu'il est construit dans le constructeur ou avant 
   * c. Is it copied by `_name { name }` ?
+  * > Yes
   * d. Could copies be avoided somehow?
+  * > yes, on pourra toujours retirer 1 copie
 
 
 [Optional] What about `std::string_view` ?
