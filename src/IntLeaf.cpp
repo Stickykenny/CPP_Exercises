@@ -6,9 +6,6 @@
 #include <memory>
 #include <string>
 
-IntLeaf::IntLeaf(int value)
-    : _value { value }
-{}
 int IntLeaf::data() const
 {
     return _value;

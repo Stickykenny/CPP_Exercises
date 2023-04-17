@@ -7,8 +7,6 @@
 #include <sstream>
 #include <string>
 
-ArrayNode::ArrayNode()
-{}
 std::string ArrayNode::print() const
 {
 
@@ -42,6 +40,10 @@ void ArrayNode::push_back(NodePtr node)
 unsigned int ArrayNode::height() const
 {
     unsigned int result = 0u;
+    if (this->child_count() == 0)
+    {
+        return 0u;
+    }
 
     for (size_t i = 0; i != _array.size(); ++i)
     {

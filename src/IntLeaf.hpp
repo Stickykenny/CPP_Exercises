@@ -7,7 +7,10 @@
 class IntLeaf : public Leaf
 {
 public:
-    IntLeaf(int value);
+    IntLeaf(int value)
+        : Leaf { NodeKind::INT }
+        , _value { value } {};
+
     int                             data() const;
     std::string                     print() const;
     NodeKind                        kind() const;

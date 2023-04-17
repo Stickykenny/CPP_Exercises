@@ -7,7 +7,10 @@
 class StringLeaf : public Leaf
 {
 public:
-    StringLeaf(const std::string& str);
+    StringLeaf(const std::string& str)
+        : Leaf { NodeKind::STRING }
+        , _str { str }
+    {}
     std::string                        data() const;
     std::string                        print() const;
     NodeKind                           kind() const;

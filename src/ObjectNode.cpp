@@ -5,8 +5,6 @@
 
 #include <string>
 
-ObjectNode::ObjectNode()
-{}
 std::string ObjectNode::print() const
 {
     std::string result = "{";
@@ -37,6 +35,10 @@ void ObjectNode::insert(const std::string key, NodePtr value)
 unsigned int ObjectNode::height() const
 {
     unsigned int result = 0u;
+    if (this->child_count() == 0)
+    {
+        return 0u;
+    }
 
     for (auto i = _dico.begin(); i != _dico.end(); ++i)
     {
@@ -47,11 +49,18 @@ unsigned int ObjectNode::height() const
 
 unsigned int ObjectNode::node_count() const
 {
-    unsigned int result = 0u;
+    unsigned int result = 1u;
 
     for (auto i = _dico.begin(); i != _dico.end(); ++i)
     {
         result += i->second->node_count();
     }
-    return result + 1;
+    return result;
+}
+Node* ObjectNode::at(const std::string& key)
+{
+    if (has_child(key))
+        return _dico.at(key).get();
+    else
+        return nullptr;
 }

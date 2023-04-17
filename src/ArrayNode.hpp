@@ -8,8 +8,9 @@
 class ArrayNode : public Node
 {
 public:
-    ArrayNode();
-
+    ArrayNode()
+        : Node(NodeKind::ARRAY)
+    {}
     std::string                       print() const;
     NodeKind                          kind() const;
     static std::unique_ptr<ArrayNode> make_ptr() { return std::make_unique<ArrayNode>(); };

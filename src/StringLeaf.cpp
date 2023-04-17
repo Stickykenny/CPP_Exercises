@@ -5,9 +5,6 @@
 
 #include <string>
 
-StringLeaf::StringLeaf(const std::string& str)
-    : _str { str }
-{}
 std::string StringLeaf::data() const
 {
     return _str;
